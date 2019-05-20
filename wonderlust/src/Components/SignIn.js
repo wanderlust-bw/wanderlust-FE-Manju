@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 
 class SignIn extends React.Component {
@@ -21,7 +21,11 @@ class SignIn extends React.Component {
         this.setState({ [name]: e.target.value })
 
     }
-
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log("This form was submitted with following data");
+        console.log(this.state)
+    }
 
     render() {
         return (
@@ -31,27 +35,27 @@ class SignIn extends React.Component {
                     <div>
 
                         <div>
-                            <Link to="/SignIn">Sign In or </Link>
-                            <Link to="/SignUp">Sign Up</Link>
+                            <NavLink className="navlink1" to="/SignIn">Sign In or </NavLink>
+                            <NavLink className="navlink1"to="/SignUp">Sign Up</NavLink>
                         </div>
-                        <div>
+                        <div className="siginform">
                             <form onSubmit={this.handleSubmit}>
                                 <div>
                                     <div>
                                         <span>Email Address</span>
                                     </div>
-                                    <input type="email" id="email" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+                                    <input  className="inputtext" type="email" id="email" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
                                 </div>
 
                                 <div>
                                     <div>
                                         <span>PassWord</span>
                                     </div>
-                                    <input type="password" id="password" placeholder="Enter PassWord" name="password" value={this.state.password} onChange={this.handleChange} />
+                                    <input  className="inputtext" type="password" id="password" placeholder="Enter Password" name="password" value={this.state.password} onChange={this.handleChange} />
                                 </div>
 
                                 <div>
-                                    <button type="submit" >Sign In</button><a href="#" className="accountlink" to="/SignUp">Create an account</a>
+                                    <button  className="button" type="submit" >Sign In</button><a href="#" className="accountlink" to="/SignUp">Create an account</a>
                                 </div>
                             </form>
                         </div>

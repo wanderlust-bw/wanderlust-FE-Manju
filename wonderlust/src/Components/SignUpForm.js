@@ -1,5 +1,6 @@
 import React from "react"
-import {Link}from "react-router-dom"
+import {Link, NavLink}from "react-router-dom"
+import "./form.css"
 
 
 class Signup extends React.Component {
@@ -8,7 +9,7 @@ class Signup extends React.Component {
         this.state = {
             email: "",
             password: "",
-            username: "",
+            name: "",
             hasAgreed: false
 
         }
@@ -28,36 +29,62 @@ class Signup extends React.Component {
         console.log(this.state)
     }
 
-    setGender(event) {
-        console.log(event.target.value);
-      }
+   
+
+  
+      
 
     render() {
-        return (
-            <div>
-                 <Link to="/SignIn">Sign In or </Link>
-          <Link to="/SignUp">Sign Up</Link>
-                <form className="signup" onchange={this. handleSubmit}>
-                    <div>
-                    <input type="text" id="username" placeholder="Enter Your Full Name" name="username" value={this.state.name}  onChange={this.handleChange} />
-                    </div>
-                    <div>
-                    <input type="password" id="password" placeholder="Enter your PassWord" name="password" value={this.state.password} onChange={this.handleChange} />
-                    </div>
-                    <div>
-                    <input type="Email" id="email" placeholder="Enter Email" name="Email" value={this.state.email}  onChange={this.handleChange} />
-                    </div>
-                    <div >
-                    <input type="checkbox" name="hasAgreed" /> <span>I am a Tour Guard</span>
-                    <input type="checkbox" name="hasAgreed" /> <span>I am a Customer</span>
-                    </div>
-                    <div>
-                    <button type="submit">SignUp</button>  <a href="#">I am ALready Menber</a>
-                    </div>
-
-                </form>
-            </div>
-        )
+       
+            return (
+              <div className="maindivs">
+              <div className="App">
+               <div className="maindiv maindiv1">
+               </div>
+              <div className="maindiv maindiv2"> 
+                
+                <div className="nav">
+                  <NavLink className="navlink1" to="/SignIn" >Sign In or </NavLink>
+                  <NavLink className="navlink1" to="/SignUp">Sign Up</NavLink>
+                </div> 
+                <div className="siginform">
+                    <form onSubmit={this.handleSubmit}>
+                        <div >
+                        <div className="text">
+                        <div>FullName</div>
+                        </div>
+                        <input className="inputtext"  type="text" id="name" placeholder="Enter Your Full Name name" name="name" value={this.state.name} onChange={this.handleChange} />
+                        </div>
+                        
+                        <div >
+                        <div className="text">
+                        <span>PassWord</span>
+                        </div>
+                        <input className="inputtext"  type="text" id="password" placeholder="Enter your PassWord" name="password" value={this.state.password} onChange={this.handleChange} />
+                        </div>
+    
+                        <div >
+                        <div className="text">
+                        <span>E-Mail Address</span>
+                        </div>
+    
+                        <input  className="inputtext"  type="email" id="email" placeholder="Enter E-Mail your Email" name="email" value={this.state.email} onChange={this.handleChange} />
+                        </div>
+    
+                        <div className="checkbox">
+                        <span>
+                        <input  type="checkbox" name="hasAgreed" value={this.state.hasAgreed}   onChange={this.handleChange} /> <span >Tour Guide</span>
+                            <input  type="checkbox" name="hasAgreed" value={this.state.hasAgreed}    onChange={this.handleChange} /> <span >Customer</span>
+                        </span>
+                        </div>
+    
+                         <div>
+                        <button  type="submit">SignUp</button> <Link  className="buttontext" to="/SignIn">I am already Member</Link>
+                        </div>
+                    </form>
+                    </div>  </div>  </div>  
+                </div>
+            )
     }
 
 }
