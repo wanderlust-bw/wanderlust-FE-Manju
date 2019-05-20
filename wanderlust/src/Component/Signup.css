@@ -1,17 +1,31 @@
+/* .sign-up-page {
+    display: flex;
+} */
+
+/* .sign-up {
+    width: 550px;
+    height: 550px;
+   
+    margin-left: 50px;
+} */
+
 #map {
     font-size: 50px;
     margin-top: 20px;
 }
 
-.title-text span {
-    font-family: 'Baloo Bhai', cursive;
-}
-
 .title-text {
-    font-family: 'Baloo Bhai', cursive;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
 }
 
 .email {
+    border: 1px solid white;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.username {
     border: 1px solid white;
     border-bottom: 1px solid black;
     margin-bottom: 20px;
@@ -21,4 +35,47 @@
     border: 1px solid white;
     border-bottom: 1px solid black;
     margin-bottom: 20px;
+}
+
+.check-option {
+    margin-top: 20px;
+    font-family: 'Gentium Basic', serif;
+}
+
+.guide {
+    margin-left: 100px;
+}
+
+.choose-type {
+    font-family: 'Amatic SC', cursive;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.create-account-text {
+    font-family: 'Gentium Basic', serif;
+}
+
+.started-button {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #5D89AF;
+}
+
+.sign-link {
+    text-decoration: none;
+    color: black;
+}
+
+.login-link {
+    text-decoration: none;
+    color: black;
+}
+
+.Links {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bolder;
+    font-size: 20px;
 }
