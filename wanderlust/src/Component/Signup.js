@@ -1,33 +1,52 @@
 import React from 'react'
 import './Signup.css'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 class SignUp extends React.Component {
   constructor() {
   super();
   this.state = {
-  email: '',
+  name: '',
   username: '',
   password: '',
-  hasSigned: false
+  userType: ''
   }
   }
 
+//   componentDidMount() {
+//     axios.post('http://localhost:5000/user/register', this.state)
+//     .then(res => {
+//         const users = res.data;
+//         this.setState({ users: res.data })
+//     })
+//   }
+
   handleChange = e => {
-    let target = e.target;
-    let value = target.type === "checkbox" ? target.checkbox: target.value;
-    let name = target.name
-    this.setState({ [name]: value })
+    const {name, value} = e.target
+    this.setState({ [name]: value });
+}
+
+  customerSelect = e => {
+    this.setState({userType:e.target.value})
+  }
+
+    register = input => {
+    console.log(input)
+    axios.post('https://wanderlust-2.herokuapp.com/user/register', input)
+    .then( res => { console.log(res)})
 }
 
 handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state)
+    this.register(this.state)
+    // this.setState({hasSigned: true})
 }
  
 
 
-  render() {
+  render() { 
+
     return (
     <form onSubmit={this.handleSubmit} className='sign-up-page'>
         <div className='Links'>
@@ -45,11 +64,11 @@ handleSubmit = e => {
             <div>
                 <input 
                 className='email'
-                placeholder='Email'
-                type='email'
-                id='email'
-                name='email'
-                value={this.state.email}
+                placeholder='Name'
+                type='text'
+                id='name'
+                name='name'
+                value={this.state.name}
                 onChange={this.handleChange}>
                 </input>
             </div>
@@ -82,8 +101,11 @@ handleSubmit = e => {
                 <h3>I want to sign up as</h3>
             </div>
             <div className='check-option'>
-            <input className='customer' type='checkbox' name='user' value='customer' onChange={this.handleChange}></input> Customer
-            <input className='guide' type='checkbox' name='user' value='customer' onChange={this.handleChange}></input> Tour Guide
+            <select value={this.state.userType} onChange={this.customerSelect} className='user-option'>
+                <option name='select' value='select-options'>Select Experience</option>
+                <option className='customer-option' name='customer' value='customer'>Customer</option>
+                <option className='guide-option' name='guide' value='guide'>Guide</option>
+            </select>   
             </div>
         </div> 
         {/* <div>

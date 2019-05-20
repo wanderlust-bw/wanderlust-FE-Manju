@@ -1,6 +1,15 @@
 .App {
   text-align: center;
+  /* background-image: url('https://www.traveldudes.org/sites/default/files/offthepath.jpg');
+  background-size: cover; */
 }
+
+/* body {
+  background-image: url('https://www.traveldudes.org/sites/default/files/offthepath.jpg');
+  background-size: cover;
+} */
+
+
 
 .links {
   display: flex;
