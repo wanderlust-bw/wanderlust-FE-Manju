@@ -4,7 +4,7 @@
 
 .inputtext{
     height:20px;
-    width:100px;
+    width:300px;
     margin-top:10px;
 }
 
@@ -32,5 +32,12 @@
 .button{
     height:30px;
     width:100px;
+    margin-top: 20px;
 
+}
+
+.select{
+    margin-top: 40px;
+    height:20px;
+    width:60px;
 }

@@ -8,7 +8,7 @@ class SignIn extends React.Component {
         super();
 
         this.state = {
-            email: "",
+            username: "",
             password: "",
 
         }
@@ -44,7 +44,7 @@ class SignIn extends React.Component {
                                     <div>
                                         <span>Email Address</span>
                                     </div>
-                                    <input  className="inputtext" type="email" id="email" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+                                    <input  className="inputtext" type="text" id="text" placeholder="Enter your UserName" name="username" value={this.state.email} onChange={this.handleChange} />
                                 </div>
 
                                 <div>
