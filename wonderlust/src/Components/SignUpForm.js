@@ -54,36 +54,32 @@ class Signup extends React.Component {
     render() {
 
         return (
-            <div >
-                <div>
-                    <div  className="App">
-
-                        
+                    
                         <div className="signform">
                         <div className="nav">
-                            <NavLink className="navlink1" to="/SignIn" >Sign In or </NavLink>
-                            <NavLink className="navlink1" to="/SignUp">Sign Up</NavLink>
+                            <NavLink className="navlink1" to="/LogIn" > SignUp or </NavLink>
+                            <NavLink className="navlink1" to="/SignUp">Log In</NavLink>
                         </div>
                             <form onSubmit={this.handleSubmit}>
                                 <div className="submitform" >
                                 <div>
-                                    <div className="text">
-                                        <div>FullName</div>
-                                    </div>
-                                    <input className="inputtext" type="text" id="name" placeholder="Enter Your Full Name name" name="name" value={this.state.name} onChange={this.handleChange} />
+                                    <div>
+                                <span className="text">Full-Name</span>
+                                </div>
+                                    <input className="inputtext" type="text" id="name" placeholder="Enter Your Full- Name " name="name" value={this.state.name} onChange={this.handleChange} />
                                 </div>
                                 <div >
                                     <div className="text">
-                                        <span>UserName</span>
+                                        <span>User-Name</span>
                                     </div>
-                                    <input className="inputtext1" type="text" id="text" placeholder="Enter UserName" name="username" value={this.state.username} onChange={this.handleChange} />
+                                    <input className="inputtext1" type="text" id="text" placeholder="Enter User-Name" name="username" value={this.state.username} onChange={this.handleChange} />
                                 </div>
 
                                 <div >
                                     <div className="text">
-                                        <span>PassWord</span>
+                                        <span>Password</span>
                                     </div>
-                                    <input className="inputtext" type="text" id="password" placeholder="Enter your PassWord" name="password" value={this.state.password} onChange={this.handleChange} />
+                                    <input className="inputtext" type="text" id="password" placeholder="Enter your Password" name="password" value={this.state.password} onChange={this.handleChange} />
                                 </div>
 
 
@@ -99,14 +95,13 @@ class Signup extends React.Component {
                                 </div>
 
                                 <div>
-                                    <button className="button" type="submit">SignUp</button> <Link className="buttontext" to="/SignIn">I am already Member</Link>
+                                    <button className="button" type="submit">SignUp</button> <Link className="buttontext" to="/LogIn">I am already Member</Link>
                                 </div>
                                 </div>
                             </form>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    
+             
         )
     }
 

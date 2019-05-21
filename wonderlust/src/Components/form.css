@@ -1,20 +1,27 @@
 
+
 .navlink1{
     color:white;
     text-decoration: none;
-    margin-top:20px;
+    margin-top:10px;
+    margin-bottom:20px;
 }
 
 .nav{
-    margin-top: 200px;
-    margin-left: 50px;
+    margin-top: 0px;
+    margin-top: 100px;
     font-size: 25px;
 }
 
 .signform {
-    /* margin-top: 250px; */
+ margin-left: 00px;
+ border:1px solid blue;
+ background:#052622;
+ width:1300px;
+ height:800px;
   
 }
+
 
 .inputtext{
     background: transparent;
@@ -25,14 +32,14 @@
     width: 400px;
     height: 30px;
     border-top: 0px;
-    border-left: 0px;
+    border-left: 80px;
     border-right: 20px;
     color:white;
 }
 
 .text{
     color:white;
-    margin-left: 0px;
+    margin-top:20px;
 }
 
 .inputtext1{
@@ -79,15 +86,15 @@
     height:50px;
 }
 
-.login{
-   margin-top:200px;
-   margin-left: 30px;
+.navigation{
+margin-top: 150px;
 }
 
 .navlink2{
     color:white;
     text-decoration: none;
-    margin-top:20px;
+    margin-top:100px;
+    font-size: 25px;
 }
 
 .inputtexts{
