@@ -54,17 +54,19 @@ class Signup extends React.Component {
     render() {
 
         return (
-            <div className="maindivs">
-                <div className="App">
-                    <div className="maindiv maindiv2">
+            <div >
+                <div>
+                    <div  className="App">
 
+                        
+                        <div className="signform">
                         <div className="nav">
                             <NavLink className="navlink1" to="/SignIn" >Sign In or </NavLink>
                             <NavLink className="navlink1" to="/SignUp">Sign Up</NavLink>
                         </div>
-                        <div className="siginform">
                             <form onSubmit={this.handleSubmit}>
-                                <div >
+                                <div className="submitform" >
+                                <div>
                                     <div className="text">
                                         <div>FullName</div>
                                     </div>
@@ -74,7 +76,7 @@ class Signup extends React.Component {
                                     <div className="text">
                                         <span>UserName</span>
                                     </div>
-                                    <input className="inputtext" type="text" id="text" placeholder="Enter UserName" name="username" value={this.state.username} onChange={this.handleChange} />
+                                    <input className="inputtext1" type="text" id="text" placeholder="Enter UserName" name="username" value={this.state.username} onChange={this.handleChange} />
                                 </div>
 
                                 <div >
@@ -86,9 +88,9 @@ class Signup extends React.Component {
 
 
 
-                                <div className="checkbox">
-                                    <span classname="select">
-                                        <select value={this.state.userType} onChange={this.customerType}>
+                                <div className="option">
+                                    <span>
+                                        <select classname="select" value={this.state.userType} onChange={this.customerType}>
                                         <option name="Guide" value="SelectValue">Select Option</option>
                                             <option name="Guide" value="tourGuide">Tour Guide</option>
                                             <option name="Customer" value="customer">Customer</option>
@@ -98,6 +100,7 @@ class Signup extends React.Component {
 
                                 <div>
                                     <button className="button" type="submit">SignUp</button> <Link className="buttontext" to="/SignIn">I am already Member</Link>
+                                </div>
                                 </div>
                             </form>
                         </div>
