@@ -1,0 +1,57 @@
+.login-page {
+    border: 1px solid black;
+    width: 550px;
+    height: 350px;
+    background-color: white;
+    margin-left: 445px;
+    border-radius: 5px;
+}
+
+.login-img {
+    width: 550px;
+    height: 230px;
+    /* margin-top: 50px; */
+    opacity: 0.7;
+    border-radius: 5px;
+}
+
+.key-img {
+    background-color: #81700C;
+    width: 550px;
+    height: 230px;
+    margin-left: 445px;
+    margin-top: 50px;
+}
+
+.login-text {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+    color: #B1C267;
+}
+
+.login-username {
+    background-color: white;
+    border: 1px solid white;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px; 
+}
+
+.login-username::placeholder {
+    color: black;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bolder;
+}
+
+.login-password::placeholder {
+    color: black;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bolder;
+}
+
+.login-password {
+    background-color: white;
+    border: 1px solid white;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}

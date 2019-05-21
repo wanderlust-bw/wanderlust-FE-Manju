@@ -48,16 +48,14 @@ handleSubmit = e => {
   render() { 
 
     return (
-    <form onSubmit={this.handleSubmit} className='sign-up-page'>
-        <div className='Links'>
-         <Link className='sign-link' to='/Signup'> Sign-Up </Link>
-         <Link className='login-link' to='/Login'> Login </Link>
-        </div>
+  <div className='sign-page'>     
+    <form onSubmit={this.handleSubmit} className='sign-up-form'>
         <div className='sign-up'>
             <div>
             <i id='map' className="fas fa-map"></i>
             <h3 className='title-text'><span>WanderLust</span> ...Traveling made easy</h3>
             </div> 
+            <div className='form-section'>
             <div className='create-account-text'>
                 <h3>Create an account</h3>
             </div>
@@ -107,11 +105,15 @@ handleSubmit = e => {
                 <option className='guide-option' name='guide' value='guide'>Guide</option>
             </select>   
             </div>
+            </div>
+            
         </div> 
-        {/* <div>
-            <img className='travel-img' src='http://iscreamsundae.com/wp-content/uploads/2016/08/TRAVEL.jpg'></img>
-        </div> */}
-    </form> /* sign-up-page */
+        
+    </form> 
+        <div className='image'>
+            <img className='travel-img' src='https://static1.squarespace.com/static/55d64111e4b0a862eed6a419/t/5ad68395575d1f7b2e1146ae/1524007832532/new-year-travel.jpg?format=1000w'></img>
+        </div> 
+    </div> 
     )
 
 }
