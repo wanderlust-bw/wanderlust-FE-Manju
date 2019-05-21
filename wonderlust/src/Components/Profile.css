@@ -5,6 +5,44 @@
 }
 
 .secondpart{
+    display:flex;
+    margin-right: 20px;
+    color:white;
     
-    
+}
+
+body{
+    background-image: url("https://chopra.com/sites/default/files/field/image/6reasonswhytravelingisgoodforyou.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:700px;
+}
+
+h1{
+    color:white;
+    margin-left: 10px;
+}
+
+.search{
+    color:white;
+    height:40px;
+    margin-right:10px; 
+}
+
+.form{
+    margin-top: 20px;
+
+}
+
+.textitem{
+    color:white;
+}
+
+.maindiv{
+    margin-top: 20px;
+}
+
+.textitem{
+    width:300px;
+    height:20px;
 }

@@ -37,39 +37,50 @@ class ProfilePage extends React.Component {
                 <h1>Wanderlust</h1>
                 </div>
                 <div className="secondpart">
-                <div >
-                <a href="#">Search</a> 
+                <div className="text" >
+                <a  className="search" href="#">Search</a> 
                  </div>
                  <div>
                  <h1>Profile</h1>
                  </div>
                  </div>
                  </nav>
-            </div>
- 
-            <div>
+                 <div classname="about">
               <img/>
-              <div>
+              <div >
               <a href="#">Profile</a>
               <a href="#">Message</a>
               <a href="#">Experiences</a>
               <a href="#">Payments</a>
-              <a href="#">Profile</a>
+            
               </div>
             </div>
+         
             
             <div>
-                <form  onSubmit={this.handleSubmit}>
-                <span>Bio</span>
-                <input type="name" id="name" placeholder="Enter Name" name="bio" value={this.state.bio} onChange={this.handleChange}/>
-                <span>Name</span>
-                <input  type="name" id="name" placeholder="Enter Name" name="name" value={this.state.name} onChange={this.handleChange}/>
-                <span>Email</span>
-                <input  type="email" id="email" placeholder="Enter Email" name="email" value={this.state.email} onChange={this.handleChange}/>
-                <span>Location</span>
-                <input   type="name" id="name" placeholder="Enter Location" name="location" value={this.state.location} onChange={this.handleChange}/>
+                <form  className="form" onSubmit={this.handleSubmit}>
+                    <div className="maindiv">
+                <span className="textitem">Bio : </span>
+                <input  className="textitem" type="name" id="name" placeholder="Enter Name" name="bio" value={this.state.bio} onChange={this.handleChange}/>
+                </div>
+                <div className="maindiv">
+                <span >Name : </span>
+                <input className="textitem"  type="name" id="name" placeholder="Enter Name" name="name" value={this.state.name} onChange={this.handleChange}/>
+                </div>
+                <div className="maindiv">
+                <span className="textitem">Email : </span>
+                <input className="textitem"  type="email" id="email" placeholder="Enter Email" name="email" value={this.state.email} onChange={this.handleChange}/>
+                </div>
+                <div className="maindiv">
+                <span className="textitem">Location : </span>
+                <input className="textitem" type="name" id="name" placeholder="Enter Location" name="location" value={this.state.location} onChange={this.handleChange}/>
+                </div>
+                <div className="maindiv">
                 <button type="submit">Save</button>
+                </div>
                 </form>
+         
+            </div>
             </div>
  
         </div>
