@@ -98,9 +98,9 @@ handleSubmit = e => {
             <div className='choose-type'>
                 <h3>I want to sign up as</h3>
             </div>
-            <div className='check-option'>
-            <select value={this.state.userType} onChange={this.customerSelect} className='user-option'>
-                <option name='select' value='select-options'>Select Experience</option>
+            <div>
+            <select className='select-css' value={this.state.userType} onChange={this.customerSelect}>
+                <option name='select' value='select-options'>Select Experience</option><i className="fas fa-caret-down"></i>
                 <option className='customer-option' name='customer' value='customer'>Customer</option>
                 <option className='guide-option' name='guide' value='guide'>Guide</option>
             </select>   
