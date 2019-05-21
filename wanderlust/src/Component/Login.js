@@ -1,5 +1,6 @@
 import React from 'react'
 import './Login.css'
+import { Link } from 'react-router-dom'
 
 class Login extends React.Component {
 
@@ -27,6 +28,10 @@ class Login extends React.Component {
    render() {
        return(
     <div>
+        <div className='Links'>
+         <Link className='sign-link' to='/Signup'> Sign-Up </Link>
+         <Link className='login-link' to='/Login'> Login </Link>
+        </div>
            <div className='key-img'>
                <img className='login-img' src='https://www.visitflorida.com/content/visitflorida/en-us/travel-ideas/_jcr_content/full_width/vf_image.img.1280.500.jpg'></img>
            </div>
@@ -61,7 +66,7 @@ class Login extends React.Component {
                 </input>
             </div>
             <div>
-                <button type='submit' className='started-button'>Log In</button>
+           <Link to='/Experiences'> <button type='submit' className='started-button'>Log In</button></Link>
             </div>
         </form>
     </div>

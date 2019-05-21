@@ -1,0 +1,115 @@
+.profile-app {
+    background-color: white;
+}
+
+.nav-section {
+    display: flex;
+    justify-content: space-evenly
+}
+
+.profile-link a {
+    text-decoration: none;
+    color: #0FB76F;
+    font-family: 'Amatic SC', cursive;
+    font-size: 45px;
+    text-shadow: 1px 1px black;
+}
+
+.exp-form-section {
+    margin-top: 10px;
+
+}
+
+.exp-title-text {
+    font-size: 50px;
+    color: #036887;
+    font-family: 'Amatic SC', cursive;
+    margin-left: 315px;
+    margin-top: 0;
+}
+
+.exp-title-text span {
+    color: #1F96BC;
+}
+
+.user-info {
+    border: 1px solid black;
+    width: 300px;
+    height: 180px;
+    text-align: start;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'Amatic SC', cursive;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 20px
+}
+.top-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.top-section button {
+    font-size: 40px;
+    margin-right: 10px;
+    margin-top: 3px;
+    padding-left: 10px;
+    border-radius: 15px;
+    width: 80px;
+}
+
+.locations::placeholder {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+}
+
+.trips::placeholder {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+}
+
+.locations {
+    background-color: white;
+    border: 1px solid white;
+    border-bottom: 1px solid black;
+    width: 250px;
+    height: 30px;
+    padding-top: 10px;
+    margin-top: 9px;
+    margin-right: 100px;
+    margin-bottom: 75px;
+}
+
+.trips {
+    background-color: white;
+    border: 1px solid white;
+    border-bottom: 1px solid black;
+    width: 250px;
+    height: 30px;
+    padding-top: 10px;
+    margin-top: 9px;
+    /* margin-right: 100px; */
+}
+
+.location-section {
+    display: flex;
+}
+
+.trips-section {
+    display: flex;    
+}
+
+.saved-inputs {
+    border: 1px solid black;
+    width: 200px;
+    height: 150px;
+    text-align: start;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'Amatic SC', cursive;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+}

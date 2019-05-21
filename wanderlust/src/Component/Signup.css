@@ -2,9 +2,11 @@
     /* border: 1px solid black; */
     height: 580px;
     margin-top: 50px;
-    width: 600px;
+    /* width: 600px; */
+    width: 560px;
     border-radius: 5px;
     margin-right: 40px;
+    /* margin-top: 50px; */
 }
 
 body {
@@ -17,23 +19,41 @@ body {
 
 .sign-up-form {
     /* border: 1px solid black; */
-    width: 820px;
+    width: 790px;
     height: 580px;
     margin-top: 50px;
-    margin-left: 42px;
+    margin-left: 45px;
     background-color: white;
     border-radius: 5px;
+    margin-top: 50px
 }
 
 img {
     opacity: 0.9;
 }
 
-::placeholder {
+.email::placeholder {
     font-family: 'Gentium Basic', serif;
-    font-size: 15px;
+    font-size: 17px;
     color: white;
-    /* text-shadow: 1px 1px black; */
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
+  }
+
+  .username::placeholder {
+    font-family: 'Gentium Basic', serif;
+    font-size: 17px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
+  }
+
+  .password::placeholder {
+    font-family: 'Gentium Basic', serif;
+    font-size: 17px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
   }
 
 .title-text span {
@@ -107,7 +127,7 @@ input {
 .form-section {
     background-color: rgb(183, 237, 164);
     width: 450px;
-    margin-left: 150px;
+    margin-left: 170px;
     height: 360px;
     border: 1px solid black;
     border-radius: 5px;
@@ -122,6 +142,7 @@ input {
     color: white;
     font-size: 15px;
     text-shadow: 1px 1px black;
+    cursor: pointer;
 }
 
 .sign-link {
@@ -155,11 +176,18 @@ select {
     appearance: none;
     font-family: 'Bangers', cursive;
     font-size: 20px;
-    width: 200px;    
+    width: 150px;    
     height: 35px;
-    padding-left: 38px;
-   
+    padding-left: 12px;
+    color: #E5B42E;
+    cursor: pointer;
+ }
 
+ select:hover {
+     text-shadow: 1px 1px black;
+     color: #E2A65B;
+     border: 2px solid #38AED3;
+     cursor: pointer;
  }
 
 /*  */

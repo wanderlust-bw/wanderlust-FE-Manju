@@ -33,7 +33,7 @@ class SignUp extends React.Component {
 
     register = input => {
     console.log(input)
-    axios.post('https://wanderlust-2.herokuapp.com/user/register', input)
+    axios.post('https://wanderlust-1.herokuapp.com/user/register', input)
     .then( res => { console.log(res)})
 }
 
@@ -48,7 +48,12 @@ handleSubmit = e => {
   render() { 
 
     return (
-  <div className='sign-page'>     
+    <div className='body'>
+        <div className='Links'>
+         <Link className='sign-link' to='/Signup'> Sign-Up </Link>
+         <Link className='login-link' to='/Login'> Login </Link>
+        </div>
+  <div className='sign-page'>   
     <form onSubmit={this.handleSubmit} className='sign-up-form'>
         <div className='sign-up'>
             <div>
@@ -114,6 +119,7 @@ handleSubmit = e => {
             <img className='travel-img' src='https://static1.squarespace.com/static/55d64111e4b0a862eed6a419/t/5ad68395575d1f7b2e1146ae/1524007832532/new-year-travel.jpg?format=1000w'></img>
         </div> 
     </div> 
+    </div>
     )
 
 }
