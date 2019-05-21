@@ -28,7 +28,7 @@ class LogIn extends React.Component {
     // register=(password ,name) => {
     //     // input=this.state
     //     console.log('My params are', input)
-    //     axios.post(`https://wanderlust-2.herokuapp.com/user/register`, )
+    //     axios.post(`https://wanderlust-2.herokuapp.com/api/register`, 
     //       .then(res => { console.log(res)})    
     // }
     // handleSubmit = e => {

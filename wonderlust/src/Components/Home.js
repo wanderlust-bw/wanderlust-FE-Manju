@@ -46,13 +46,12 @@ class ProfilePage extends React.Component {
                  </div>
                  </nav>
                  <div classname="about">
+              <div className="message">
               <img/>
-              <div >
-              <a href="#">Profile</a>
-              <a href="#">Message</a>
-              <a href="#">Experiences</a>
-              <a href="#">Payments</a>
-            
+              <a className="anchor" href="#">Profile</a>
+              <a className="anchor" className="anchor" href="#">Message</a>
+              <a className="anchor" href="#">Experiences</a>
+              <a className="anchor" href="#">Payments</a>
               </div>
             </div>
          
@@ -64,7 +63,7 @@ class ProfilePage extends React.Component {
                 <input  className="textitem" type="name" id="name" placeholder="Enter Name" name="bio" value={this.state.bio} onChange={this.handleChange}/>
                 </div>
                 <div className="maindiv">
-                <span >Name : </span>
+                <span className="textitem" >Name : </span>
                 <input className="textitem"  type="name" id="name" placeholder="Enter Name" name="name" value={this.state.name} onChange={this.handleChange}/>
                 </div>
                 <div className="maindiv">
@@ -76,7 +75,7 @@ class ProfilePage extends React.Component {
                 <input className="textitem" type="name" id="name" placeholder="Enter Location" name="location" value={this.state.location} onChange={this.handleChange}/>
                 </div>
                 <div className="maindiv">
-                <button type="submit">Save</button>
+                <button className="botton" type="submit">Save</button>
                 </div>
                 </form>
          

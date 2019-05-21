@@ -35,7 +35,7 @@ class Signup extends React.Component {
     register=input => {
         // input=this.state
         console.log('My params are', input)
-        axios.post(`https://wanderlust-2.herokuapp.com/user/register`, input)
+        axios.post(`https://wanderlust-1.herokuapp.com/api/register`, input)
           .then(res => { console.log(res)})    
     }
     handleSubmit = e => {
