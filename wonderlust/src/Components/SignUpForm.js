@@ -41,8 +41,6 @@ class Signup extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
         this.register(this.state);
-
-        // this.setState({ hasSign: true })
         console.log("This form was submitted with following data");
         console.log(this.state)
     }
@@ -57,8 +55,8 @@ class Signup extends React.Component {
                     
                         <div className="signform">
                         <div className="nav">
-                            <NavLink className="navlink1" to="/LogIn" > SignUp or </NavLink>
-                            <NavLink className="navlink1" to="/SignUp">Log In</NavLink>
+                            <NavLink className="navlink1" to="/SignUp" > SignUp or </NavLink>
+                            <NavLink className="navlink1" to="/LogIn">Log In</NavLink>
                         </div>
                             <form onSubmit={this.handleSubmit}>
                                 <div className="submitform" >
@@ -70,7 +68,7 @@ class Signup extends React.Component {
                                 </div>
                                 <div >
                                     <div className="text">
-                                        <span>User-Name</span>
+                                        <span>Username</span>
                                     </div>
                                     <input className="inputtext1" type="text" id="text" placeholder="Enter User-Name" name="username" value={this.state.username} onChange={this.handleChange} />
                                 </div>

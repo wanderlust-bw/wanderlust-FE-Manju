@@ -1,6 +1,8 @@
 import React from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink,Redirect } from "react-router-dom"
 import "./form.css"
+import ProfilePage from "./Home"
+
 
 
 class LogIn extends React.Component {
@@ -22,14 +24,35 @@ class LogIn extends React.Component {
         this.setState({ [name]: e.target.value })
 
     }
-    handleSubmit = e => {
-        e.preventDefault();
-        console.log("This form was submitted with following data");
-        console.log(this.state)
 
-        // Call axios with usrname and password 
-        // if correct username setSatete logged in to true, else false
-    }
+    // register=(password ,name) => {
+    //     // input=this.state
+    //     console.log('My params are', input)
+    //     axios.post(`https://wanderlust-2.herokuapp.com/user/register`, )
+    //       .then(res => { console.log(res)})    
+    // }
+    // handleSubmit = e => {
+    //     e.preventDefault();
+    //     this.register(this.state);
+    //     console.log("This form was submitted with following data");
+    //     console.log(this.state)
+    // }
+
+    // handleSubmit = e => {
+    //     e.preventDefault();
+    //    let password= localStorage.getItem(this.state.name)
+    //     if (password === this.state.password) {
+    //         this.setState({loggedIn : true })
+    //     } else {
+    //         this.setState({loggedIn: false })
+    //     }
+    //     console.log("This form was submitted with following data");
+    //     console.log(this.state)
+    // }
+
+        
+ 
+    
 
     render() {
         return (
@@ -56,13 +79,13 @@ class LogIn extends React.Component {
                                 </div>
 
                                 <div>
-                                    <button  className="button" type="submit" >LogIn</button>  <Link className="accountlink" to="/SignUp">Create an account</Link>
+                                    <Link to="/ProfilePage"><button  className="button" type="submit" >LogIn</button></Link>  <Link className="accountlink" to="/SignUp">Create an account</Link>
                                 </div>
                             </form>
                         </div>
                     </div>
 
-                   {/* { this.state.loggedIn && <Redirecr to={Dashboard}></Redirecr>}  */}
+                   {/* { this.state.loggedIn && <Redirect  to={ProfilePage}></Redirect >}  */}
                    </div>    
                     
                    
