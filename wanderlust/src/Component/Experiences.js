@@ -6,8 +6,10 @@ class Experiences extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
-     locations: '',
-     addTrips: ''
+     location: '',
+     locationsBox: [],
+     trip: '',
+     addTripsBox: []
     }
     }
 
@@ -18,19 +20,26 @@ class Experiences extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        console.log('hi')
+        // console.log('hi')
         console.log(this.state)
     }
 
-    // locationHandler = e => {
-    //     this.props.locationHandler(this.state.locations)
-    //     console.log('im here')
-    //     console.log(this.state)
-    // }
+    addLocation = e => {
+        e.preventDefault();
+        console.log(e.target.value)
+        this.setState({
+        locationsBox: [ ...this.state.locationsBox , this.state.location]
+        })
+        console.log("hi " , this.state)
+    }
 
-    // tripHandler = e => {
-    //     this.props.tripHandler(this.state.trips)
-    // }
+    addTrips = e => {
+        e.preventDefault();
+        console.log(e.target.value)
+        this.setState({
+        addTripsBox: [ ...this.state.addTripsBox , this.state.trip]
+        })
+    }
 
     render() {
         return(
@@ -58,12 +67,12 @@ class Experiences extends React.Component {
                   <form onSubmit={this.handleSubmit} className='exp-form-section'>
                   <div className='location-section'>
                       <div>
-                        <button type='submit'><i className="fas fa-plus"></i></button>
+                        <button onClick={this.addLocation} type='submit'><i className="fas fa-plus"></i></button>
                       </div>
                       <div>
                         <input
                         className='locations'
-                        placeholder='Add Locations'
+                        placeholder='Add Travels'
                         name='location'
                         value={this.state.name}
                         onChange={this.handleChange}>
@@ -72,12 +81,12 @@ class Experiences extends React.Component {
                   </div>
                   <div className='trips-section'>
                       <div>
-                         <button type='submit'><i className="fas fa-plus"></i></button>
+                         <button onClick={this.addTrips} type='submit'><i className="fas fa-plus"></i></button>
                       </div>
                       <div>
                         <input
                         className='trips'
-                        placeholder='Add Trips'
+                        placeholder='Add Images'
                         name='trip'
                         value={this.state.name}
                         onChange={this.handleChange}>
@@ -94,10 +103,14 @@ class Experiences extends React.Component {
                     <h3>E-mail:</h3>
                   </div>
 
-                 <div className='saved-inputs'>
-                    <h3>Locations:</h3>
-                    <h3>Trips Made:</h3>
-                  </div>
+                 <form locationsBox={this.locationsBox} handleChange={this.handleChange} className='saved-inputs'>
+                    <h3>Add Travels</h3>
+                    <p>{this.state.locationsBox}</p>
+                  </form>
+
+                  <form addTripsBox={this.addTripsBox} handleChange={this.handleChange} className='saved-inputs'>
+                  <h3>Add Photos</h3><p>{this.state.addTripsBox}</p>
+                  </form>
 
             </div> {/* top-section end */}
                 
