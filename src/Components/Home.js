@@ -1,5 +1,6 @@
 import React from "react"
 import "./Profile.css"
+import {Link} from "react-router-dom"
 
 
 class ProfilePage extends React.Component {
@@ -87,7 +88,7 @@ class ProfilePage extends React.Component {
                         <div >
                         <a  href="#" className="work">Profile</a>
                         <a  href="#" className="work">Message</a>
-                        <a href="#" className="work">Experiences</a>
+                        <Link to = "/"className="work">Experiences</Link>
                         <a  href="#" className="work">Payments</a>
                         <a  href="#" className="work">Become a Guide</a>
                         </div>
