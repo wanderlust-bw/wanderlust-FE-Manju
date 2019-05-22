@@ -2,6 +2,8 @@ import React from 'react'
 import './TravelGuide.css'
 import { Link } from 'react-router-dom'
 
+
+
 class TravelGuide extends React.Component {
     constructor() {
     super(); 
@@ -41,8 +43,10 @@ handleSubmit = e => {
                  </div> {/* travel-logo end */}
 
                  <div className='a-links'>
+
                      <Link className='travel-profile' to='/ProfilePage'>Profile</Link>
                      <a className='travel-Experiences' href=''>Experiences</a>
+
                  </div> {/* a-links end */}
 
             </div> {/* travel-header end   */}
