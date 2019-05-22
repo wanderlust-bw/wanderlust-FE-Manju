@@ -2,6 +2,7 @@ import React from "react"
 import { Link, NavLink,Redirect } from "react-router-dom"
 import "./form.css"
 import ProfilePage from "./Home"
+import axios from "axios"
 
 
 
@@ -11,32 +12,71 @@ class LogIn extends React.Component {
         super();
 
         this.state = {
-            name: "",
+            username: "",
             password: "",
-            loggedIn: false
+           
         }
     }
 
 
     handleChange = e => {
         let target = e.target;
-        let name = target.name;
-        this.setState({ [name]: e.target.value })
-
+        let value = target.type === "option" ? target.option : target.value;
+        let name = target.name
+        this.setState({ [name]: value })
+    }
+    
+    login=input => {
+        // input=this.state
+        console.log('My params are', input)
+        axios.post(`https://wanderlust-1.herokuapp.com/user/login`, input)
+          .then(res => {  console.log(res), localStorage.setItem("jwt", res.data.token)
+          localStorage.setItem("userType", res.data.userType)
+          localStorage.setItem("userId", res.data.userId)
+          if(localStorage.getItem("userType") === "tourGuide") {
+              this.props.history.push("/ProfilePage") 
+          }
+          else if (localStorage.getItem("userType") === "customer") {
+            this.props.history.push("/ProfilePage") 
+        }
+         }
+           ) 
+         
+          .catch(err => { console.log(err)})     
+    }
+    handleSubmit = e => {
+        e.preventDefault();
+        this.login(this.state);
+        console.log("This form was submitted with following data");
+        console.log(this.state)
     }
 
-    // register=(password ,name) => {
+
+
+    // handleChange = e => {
+    //     // let target = e.target;
+    //     // let name = target.name;
+    //     this.setState({ [e.target.name]: e.target.value })
+
+    // }
+
+    // login=(e,input) => {
+    //     e.preventDefault()
     //     // input=this.state
-    //     console.log('My params are', input)
-    //     axios.post(`https://wanderlust-2.herokuapp.com/api/register`, 
-    //       .then(res => { console.log(res)})    
+    //     console.log('My params are')
+    //     axios.post(`https://wanderlust-1.herokuapp.com/user/login`, this.state)
+        
+    //       .then(res => { console.log(res)})
+    //       .catch(err => { console.log(err)})
+              
     // }
-    // handleSubmit = e => {
-    //     e.preventDefault();
-    //     this.register(this.state);
-    //     console.log("This form was submitted with following data");
-    //     console.log(this.state)
-    // }
+
+// login = e => {
+//         e.preventDefault();
+//         this.register(this.state);
+//         console.log("This form was submitted with following data");
+//         console.log(this.state)
+//     }
 
     // handleSubmit = e => {
     //     e.preventDefault();
@@ -68,7 +108,7 @@ class LogIn extends React.Component {
                             <form onSubmit={this.handleSubmit}>
                                 <div className="text">
                                 <p>Username</p>
-                                    <input  className="inputtexts" type="name" id="name" placeholder="Enter your UserName" name="name" value={this.state.name} onChange={this.handleChange} />
+                                    <input  className="inputtexts" type="name" id="name" placeholder="Enter your UserName" name="username" value={this.state.username} onChange={this.handleChange} />
                                 </div>
 
                                 <div>
@@ -79,7 +119,7 @@ class LogIn extends React.Component {
                                 </div>
 
                                 <div>
-                                    <Link to="/ProfilePage"><button  className="button" type="submit" >LogIn</button></Link>  <Link className="accountlink" to="/SignUp">Create an account</Link>
+                                   <button  className="button" type="submit" >LogIn</button> <Link className="accountlink" to="/SignUp">Create an account</Link>
                                 </div>
                             </form>
                         </div>
