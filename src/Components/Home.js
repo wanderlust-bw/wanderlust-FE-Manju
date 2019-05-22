@@ -53,7 +53,7 @@ class ProfilePage extends React.Component {
         if (imagePreviewUrl) {
             imagePreview = (<img value="this.state.img" clasName="review" src={imagePreviewUrl} />);
         } else {
-            imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
+            imagePreview = (<div className="previewText">Please <br/>select <br/>an Image <br/>for<br/>Preview</div>);
         }
 
         return (
