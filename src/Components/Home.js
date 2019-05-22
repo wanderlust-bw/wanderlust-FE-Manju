@@ -7,14 +7,14 @@ class ProfilePage extends React.Component {
     constructor() {
         super();
         this.state = {
-            img: "",
             bio: "",
             name: "",
             email: "",
             location: "",
             file: '',
             imagePreviewUrl: '',
-            saved: false
+            saved: false,
+            file:null
         }
     }
 
@@ -47,11 +47,18 @@ class ProfilePage extends React.Component {
         reader.readAsDataURL(file)
     }
 
+     uploadImage = e => {
+        file: URL.createObjectURL(event.target.files[0])
+     }
+
+
+
+
     render() {
         let { imagePreviewUrl } = this.state;
         let imagePreview = null;
         if (imagePreviewUrl) {
-            imagePreview = (<img value="this.state.img" clasName="review" src={imagePreviewUrl} />);
+            imagePreview = (<img value={this.state.file}  name="img" src={imagePreviewUrl} />);
         } else {
             imagePreview = (<div className="previewText">Please <br/>select <br/>an Image <br/>for<br/>Preview</div>);
         }
@@ -66,18 +73,31 @@ class ProfilePage extends React.Component {
 
                         <div className="secondpart">
                             <div className="text" >
-                                <a className="search" href="#">Search</a>
+                                <a className="search" href="#"><p className="newclass">Search</p></a>
                             </div>
                             <div>
-                                <h1>Profile</h1>
+                                < h2 className="newclass1">Profile</h2>
                             </div>
                         </div>
                     </nav>
                     <div classname="about">
                     </div>
-
                     <div>
-                        <form className="form" onSubmit={this.handleSubmit}>
+
+                        <div >
+                        <a  href="#" className="work">Profile</a>
+                        <a  href="#" className="work">Message</a>
+                        <a href="#" className="work">Experiences</a>
+                        <a  href="#" className="work">Payments</a>
+                        <a  href="#" className="work">Become a Guide</a>
+                        </div>
+                    </div>
+
+                    <div className="form" >
+                    <div>
+                        <form onSubmit={this.handleSubmit}>
+                    
+                           <h1 className="profiles">Wanderlust Profile</h1>
                             <div className="placeholder">
                                 <input className="imagehandle fileInput" type="file" onChange={this.handleImageChange} />
                                 <button className="submitButton" type="submit" onClick={this.uploadImage}>Upload Image</button>
@@ -112,6 +132,9 @@ class ProfilePage extends React.Component {
                                         <div>
                                        <p className="paragraph"> Congratulation your profile has been created succesfully!! </p>
                                         </div>
+                                        <div>
+                                            {this.state.img}
+                                        </div>
                                         <div className="">
                                          {this.state.bio}
                                          </div>
@@ -126,16 +149,18 @@ class ProfilePage extends React.Component {
                                          </div>
                                     </div>
                                    
-                                </div>
+                                    </div>
                             )
                         }
                         </form>
                       
-
+                       
+                      </div>
                     </div>
                 </div>
 
             </div>
+            
 
         )
     }
