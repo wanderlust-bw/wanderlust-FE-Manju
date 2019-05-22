@@ -1,8 +1,42 @@
 body{
-    background: white;
-
+    background-repeat: repeat;
+    background-size: cover;
+    background-Image:url("https://www.canoa-aventura.com/wp-content/uploads/2017/02/Arte-tour-combinado.jpeg")
+  
 }
 
 .today{
   border:1px solid black;
+}
+
+.fa-map {
+    color: #38AED3;
+    font-size: 30px;
+    margin-top: 20px;
+ }
+ 
+ .title-text span {
+    color: #1F96BC;
+ }
+ 
+ .title-text  {
+    color: #036887;
+    margin: 10px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+ }
+
+ .description{
+     margin-top: 50px;
+ }
+
+ .index{
+    height:30px;
+    width:200px
+}
+
+.index1{
+    height:200px;
+    width:300px;
+    margin-top:20px;
 }
