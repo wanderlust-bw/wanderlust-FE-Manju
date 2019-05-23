@@ -8,14 +8,13 @@ class ExperienceView extends React.Component {
       super();
       this.state = {
         tours: [],
-        filterToursExperience:[]
+        filterToursExperience:[],
+        toggle:false
       };
     }
     componentDidMount() {
       auth().get(`https://wanderlust-1.herokuapp.com/user/trip`).then(res =>{this.setState({tours:res.data})})
       .catch(err =>{console.log(err)})
-    
-      // this.setState({ tours: dummyData });
     }
 
     searchToursHandler = e => {
@@ -27,10 +26,10 @@ class ExperienceView extends React.Component {
           this.setState({ filterToursExperience: tours });
     }
 
-onDelete = (id) =>{
+onDelete = (e,id) =>{
+  e.preventDefault();
   auth().delete(`https://wanderlust-1.herokuapp.com/user/trip/${id}`)
-  .then(res =>{ const data = Object.values(res.data);
-    this.setState({tours:res.data})})
+  .then(res =>{  this.setState({ tours: res.data })})
 }
 
     render(){
@@ -39,7 +38,7 @@ onDelete = (id) =>{
                 <SearchBar searchToursHandler={this.searchToursHandler}  />
               <TourExperinceList tours={this.state.filterToursExperience.length > 0
               ? this.state.filterToursExperience
-              : this.state.tours} delete={this.onDelete}/>  
+              : this.state.tours} delete={this.onDelete} />  
             </div>
         )
     }
