@@ -135,6 +135,16 @@ body{
     font-weight: bolder;
     font-size: 30px;
     border: 1px solid black;
+    color: white;
+    background-color: #1F96BC;
+    text-shadow: 1px 1px black;
+    border: 3px solid white;
+}
+
+.guide-button:hover {
+    background-color: white;
+    color: #1F96BC;
+    border: 3px solid #036887;
 }
 
 .guide-image {
