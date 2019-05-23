@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React,{Component} from 'react';
 import './App.css';
 import SignUp from "./Components/SignUpForm"
 import LogIn from "./Components/SignIn"
 import { Route, Switch } from 'react-router-dom'
 import ProfilePage from "./Components/Home"
-import ExperienceProfie from "./Components/experiencePage/ExperienceProfile"
+import ExperienceProfie from "./Components/ExperiencePage/ExperienceProfile"
 import TravelGuide from './Components/TravelGuide'
+import PostsPage from "./Components/ExperinceView/PostPage"
+
 
 class App extends Component {
   render() {
@@ -16,7 +18,8 @@ class App extends Component {
           <Route exact path="/LogIn" component={LogIn} />
           <Route exact path="/ProfilePage" component={ProfilePage} />
           <Route exact path="/TravelGuide" component={TravelGuide} />
-          <ExperienceProfie />
+          <Route exact path="/ExperienceProfie" component={ExperienceProfie} />
+         <Route extact path="/PostsPage" component={PostsPage}/>
         </Switch>
       </div>
     );

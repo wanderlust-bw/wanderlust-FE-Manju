@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component }from "react"
 import "./experence.css"
 import auth from "../../token/token"
 
@@ -16,16 +16,10 @@ class ExperienceProfie extends React.Component {
 
     handleChange = e => {
         const { name, value } = e.target;
-        // let target = e.target;
-        // let name = target.name;
         this.setState({ [name]: value })
     }
 
-    // handleSubmit = e => {
-    //     e.preventDefault();
-    //     console.log("This form was submitted with following data");
-    //     console.log(this.state)
-    // }
+
 
 
     postExperience = input => {

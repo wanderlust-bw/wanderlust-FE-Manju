@@ -1,7 +1,7 @@
-body{
-   
+
+.profilecomponent{
     background-size: cover;
-    background-Image:url ("http://www.cifftravelsandtours.com.ng/wp-content/uploads/2014/07/CiffTravelandTours_Banner2.png" )  !important;
+    background-Image:url ("http://www.cifftravelsandtours.com.ng/wp-content/uploads/2014/07/CiffTravelandTours_Banner2.png" );
     background-repeat: repeat;
     background-color: black;
 }
