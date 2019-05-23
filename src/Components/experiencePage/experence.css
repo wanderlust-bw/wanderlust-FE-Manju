@@ -1,8 +1,9 @@
 body{
-    background-repeat: repeat;
+   
     background-size: cover;
-    background-Image:url("https://www.canoa-aventura.com/wp-content/uploads/2017/02/Arte-tour-combinado.jpeg")
-  
+    background-Image:url ("http://www.cifftravelsandtours.com.ng/wp-content/uploads/2014/07/CiffTravelandTours_Banner2.png" )  !important;
+    background-repeat: repeat;
+    background-color: black;
 }
 
 .today{
