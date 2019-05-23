@@ -6,7 +6,7 @@ import { Route, Switch } from 'react-router-dom'
 import ProfilePage from "./Components/Home"
 import ExperienceProfie from "./Components/ExperiencePage/ExperienceProfile"
 import TravelGuide from './Components/TravelGuide'
-import PostsPage from "./Components/ExperinceView/PostPage"
+import PostsPage from "./Components/ExperinceView/ExperienceViewPage"
 
 
 class App extends Component {

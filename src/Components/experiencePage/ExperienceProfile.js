@@ -56,19 +56,20 @@ class ExperienceProfie extends React.Component {
                 </div>
                 <div>
                     <form className="description" onSubmit={this.handleSubmit}>
+                        <h1>Fill free to add your Tour Experence</h1>
                         <div>
-                            <span>Title : </span>
+                            <span className="index2">Title : </span>
                             <input className="index" type="text" id="title" placeholder="Enter Title" name="title" value={this.state.title} onChange={this.handleChange} />
                         </div>
                         <div>
-                            <span>Location : </span>
-                            <input className="index1" type="text" id="name" placeholder="Enter Location" name="location" value={this.state.location} onChange={this.handleChange} />
+                            <span className="index2">Location : </span>
+                            <input className="index"  type="text" id="name" placeholder="Enter Location" name="location" value={this.state.location} onChange={this.handleChange} />
                         </div>
                         <div>
-                            <span>Description : </span>
-                            <input type="text" id="name" placeholder="...Enter Description" name="description" value={this.state.description} onChange={this.handleChange} />
+                            <span className="index2">Description : </span>
+                            <input className="index" type="text" id="name" placeholder="...Enter Tour Experience" name="description" value={this.state.description} onChange={this.handleChange} />
                         </div>
-                        <button type="submit">Add Experience</button>
+                        <button className="button1" type="submit">Add Experience</button>
                     </form>
                 </div>
 

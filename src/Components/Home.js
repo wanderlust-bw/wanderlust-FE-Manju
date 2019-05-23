@@ -87,10 +87,10 @@ class ProfilePage extends React.Component {
 
                         <div >
                         <a  href="#" className="work">Profile</a>
-                        <a  href="#" className="work">Message</a>
-                        <Link to = "/"className="work">Experiences</Link>
-                        <a  href="#" className="work">Payments</a>
-                        <a  href="#" className="work">Become a Guide</a>
+                        <Link to="ExperienceProfie" className="work">ExperienceProfie</Link>
+                        <Link to = "/PostsPage"className="work">PostsPage</Link>
+                        <Link to= "/TravelGuide"className="work">ExperienceProfie</Link>
+                        <Link to="/TravelGuide" >TravelGuide</Link>
                         </div>
                     </div>
 

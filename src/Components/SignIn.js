@@ -23,6 +23,7 @@ class LogIn extends React.Component {
   login = input => {
     axios.post(`https://wanderlust-1.herokuapp.com/user/login`, input)
       .then(res => {
+        localStorage.setItem("jwt", res.data.token)
         localStorage.setItem("userType", res.data.userType)
         localStorage.setItem("userId", res.data.userId)
         if (localStorage.getItem("userType") === "tourGuide") {

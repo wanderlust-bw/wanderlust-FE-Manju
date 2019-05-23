@@ -3,7 +3,7 @@ import TourCard from "./ExperinceView/ExperienceCard";
 const dummyData = [
     {
         id: "1",
-        title: "vancuvar Tour",
+        title: "Vancuvar Tour",
         location:"Canada",
         description:"One of the most beautiful place"
     },

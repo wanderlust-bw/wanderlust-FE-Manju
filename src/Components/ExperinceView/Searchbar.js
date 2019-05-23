@@ -1,5 +1,15 @@
+import React from "react"
+
+
+
 const SearchBar = props => {
     return(
-        <input type="text" placeholder="Search" onKeyDown={props.search}/>
+        <div>
+      <h1>Wanderlust</h1>
+        <input type="text" placeholder="Search" onKeyDown={props.searchToursHandler}/>
+        </div>
     )
 }
+
+export default SearchBar ;
+

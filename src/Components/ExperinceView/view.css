@@ -1,0 +1,15 @@
+.cardlist{
+   display:flex;
+   color:white;
+   margin-left:280px;
+   margin-top: 20px;
+}
+
+.card{
+    border:1px solid black;
+    margin-left:20px;
+    text-align: center;
+    height:250px;
+    width:200px;
+    border-radius:10px;
+}
