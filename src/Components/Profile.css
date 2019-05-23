@@ -12,8 +12,7 @@
 }
 
 body{
-    /* background-image: url(""); */
-   background: #4D648D;
+   background: #4D648D  !important;
     height:1200px;
    
 }
