@@ -1,9 +1,9 @@
-body{
-   
+
+.profilecomponent{
     background-size: cover;
-    background-Image:url ("http://www.cifftravelsandtours.com.ng/wp-content/uploads/2014/07/CiffTravelandTours_Banner2.png" )  !important;
+    background-Image:url ("http://www.cifftravelsandtours.com.ng/wp-content/uploads/2014/07/CiffTravelandTours_Banner2.png" );
     background-repeat: repeat;
-    background-color: black;
+   
 }
 
 .today{
@@ -11,17 +11,17 @@ body{
 }
 
 .fa-map {
-    color: #38AED3;
+    color: white !important;
     font-size: 30px;
     margin-top: 20px;
  }
  
  .title-text span {
-    color: #1F96BC;
+    color: white !important;
  }
  
  .title-text  {
-    color: #036887;
+    color:white !important;
     margin: 10px;
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
@@ -33,11 +33,25 @@ body{
 
  .index{
     height:30px;
-    width:200px
-}
-
-.index1{
-    height:200px;
-    width:300px;
+    width:200px;
     margin-top:20px;
 }
+
+.index2{
+    color:white;
+}
+
+.button1{
+    margin-top: 20px;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: lightseagreen;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 15px;
+    text-shadow: 1px 1px black;
+    cursor: pointer;
+}
+
+
