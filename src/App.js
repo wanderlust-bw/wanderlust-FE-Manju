@@ -6,7 +6,7 @@ import { Route, Switch } from 'react-router-dom'
 import ProfilePage from "./Components/Home"
 import ExperienceProfie from "./Components/ExperiencePage/ExperienceProfile"
 import TravelGuide from './Components/TravelGuide'
-import PostsPage from "./Components/ExperinceView/ExperienceViewPage"
+import ExperienceView from "./Components/ExperinceView/ExperienceViewPage"
 
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
           <Route exact path="/ProfilePage" component={ProfilePage} />
           <Route exact path="/TravelGuide" component={TravelGuide} />
           <Route exact path="/ExperienceProfie" component={ExperienceProfie} />
-         <Route extact path="/PostsPage" component={PostsPage}/>
+         <Route extact path="/ExperienceView" component={ExperienceView}/>
         </Switch>
       </div>
     );

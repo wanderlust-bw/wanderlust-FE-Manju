@@ -1,10 +1,9 @@
 import React,{Component} from "react"
-import dummyData from "../dummy";
 import  TourExperinceList from "./ExperienceList"
 import SearchBar  from "./Searchbar"
 import auth from "../../token/token"
 
-class PostsPage extends React.Component {
+class ExperienceView extends React.Component {
     constructor() {
       super();
       this.state = {
@@ -29,7 +28,9 @@ class PostsPage extends React.Component {
     }
 
 onDelete = (id) =>{
-  auth().delete(`https://wanderlust-1.herokuapp.com/user/trip/${id}`).then(res =>{this.setState({tours:res.data})})
+  auth().delete(`https://wanderlust-1.herokuapp.com/user/trip/${id}`)
+  .then(res =>{ const data = Object.values(res.data);
+    this.setState({tours:res.data})})
 }
 
     render(){
@@ -45,4 +46,4 @@ onDelete = (id) =>{
 
 }
 
-export default PostsPage
+export default ExperienceView

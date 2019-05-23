@@ -10,7 +10,7 @@ const TourCard = props =>{
             <h3>{props.tour.location}</h3>
             <h3>{props.tour.description}</h3>
             <button>Update</button>
-            <button onClick={props.delete}>Delete</button>
+            <button onClick={props.delete}></button>
            
         </div>
     )
