@@ -30,7 +30,8 @@ h1{
 
 .form{
     margin-top: 50px;
-    background-color: hsla(89, 43%, 51%, 0.3);
+    /* background-color: hsla(89, 43%, 51%, 0.3); */
+    background-color: #f2f2f2;
     width:1000px;
     margin-left:150px;
     height:1000px;

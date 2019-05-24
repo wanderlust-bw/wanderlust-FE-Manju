@@ -27,7 +27,7 @@ class ExperienceView extends React.Component {
     // ${localStorage.getItem('userId')
     searchToursHandler = e => {
         const tours = this.state.tours.filter(p => {
-            if (p.title.includes(e.target.value)) {
+            if (p.location.includes(e.target.value)) {
                 return p
             }
           });
