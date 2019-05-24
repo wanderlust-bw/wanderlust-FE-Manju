@@ -4,7 +4,7 @@ import SignUp from "./Components/SignUpForm"
 import LogIn from "./Components/SignIn"
 import { Route, Switch } from 'react-router-dom'
 import ProfilePage from "./Components/Home"
-import ExperienceProfile from "./Components/experiencePage/ExperienceProfile"
+import ExperienceProfile from "./Components/raj/ExperienceProfile"
 import TourGuide from './Components/TourGuide'
 import TourGuideView from './Components/TravelGuide/TourGuideView'
 import ExperienceView from './Components/ExperinceView/ExperienceViewPage'
