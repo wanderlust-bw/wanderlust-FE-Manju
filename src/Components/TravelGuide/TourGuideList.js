@@ -5,7 +5,7 @@ const TourGuideList = props => {
     return (
         <div className='guide-list'>
           {props.guides.map((guide,id) => (
-            <TourCard key={id} guide={guide} delete={props.delete} />
+            <TourCard key={id} guide={guide} delete={props.delete} update={props.update} />
           ))} 
         </div>
     )

@@ -33,7 +33,7 @@ handleChange = e => {
 }
 
 post = input => {
-    auth().post('https://wanderlust-1.herokuapp.com/user/trip', input)
+    auth().post('https://wanderlust-1.herokuapp.com/api/trip', input)
     .then(res => {console.log(res)}).catch(err => {console.log(err)})
 }
 
@@ -44,7 +44,7 @@ handleSubmit = (e) => {
 }
 
 customerSelect = e => {
-    this.setState({tourType:e.target.value})
+    this.setState({tourType: e.target.value})
   }
 
     render() {
@@ -59,10 +59,7 @@ customerSelect = e => {
                  </div> {/* travel-logo end */}
 
                  <div className='a-links'>
-
-                     <Link className='travel-profile' to='/ProfilePage'>Profile</Link>
-                     <a className='travel-Experiences' href=''>Experiences</a>
-
+                     <Link className='travel-profile' to='/TourGuideView'>View Experience</Link>
                  </div> {/* a-links end */}
 
             </div> {/* travel-header end   */}

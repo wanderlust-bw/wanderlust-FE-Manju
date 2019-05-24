@@ -1,17 +1,27 @@
 import React from 'react'
-import './guide.css'
+
+
 
 const TourCard = props => {
     return (
+
+     <div>  
+
+        {/* <div className='icon-top'>
+        <i id='map' className="fas fa-map"></i>
+        </div> */}
         <div className='guide-card'>
-
-            <h3 className='title-name'><span className='guide-title'>Name :</span> {props.guide.title}</h3>
-            <h3><span className='guide-locations'>Location :</span> {props.guide.location}</h3>
-            <h3><span className='guide-about'>About :</span> {props.guide.description}</h3>
-            <h3><span className='guide-tour-type'>Tour Type :</span> {props.guide.tourType}</h3>
-            <button className='guide-buttons' onClick={e =>props.delete(e,props.tour.id)}>Delete</button>
-
+            <h3 className='title-name'>Name <span id='a'>{props.guide.title}</span></h3>
+            <h3 className='guide-locations'>Location <span id='b'>{props.guide.location}</span></h3>
+            <h3 className='guide-locations'> Description <span id='c'>{props.guide.description}</span></h3>
+            <h3 className='guide-locations'>Tour Type <span id='d'>{props.guide.tourType}</span></h3>
+            <div className='button-div'>
+            <button id='guide-update' className='guide-buttons' onClick={e =>props.update(e,props.guide.id)}>Update</button>
+            <button id='guide-delete' className='guide-buttons' onClick={e =>props.delete(e,props.guide.id)}>Delete</button>
+            </div>
         </div>
+
+      </div>  
     )
 }
 
