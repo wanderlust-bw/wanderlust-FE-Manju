@@ -1,8 +1,8 @@
-import React from "react"
+import React, { Component }from "react"
 import "./experence.css"
 import auth from "../../token/token"
 
-class ExperienceProfie extends React.Component {
+class ExperienceProfile extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -10,22 +10,18 @@ class ExperienceProfie extends React.Component {
             title: "",
             description: "",
             location: "",
+            duration: undefined,
+            tourType: ''
         }
 
     }
 
     handleChange = e => {
         const { name, value } = e.target;
-        // let target = e.target;
-        // let name = target.name;
         this.setState({ [name]: value })
     }
 
-    // handleSubmit = e => {
-    //     e.preventDefault();
-    //     console.log("This form was submitted with following data");
-    //     console.log(this.state)
-    // }
+
 
 
     postExperience = input => {
@@ -48,7 +44,9 @@ class ExperienceProfie extends React.Component {
 
     }
 
-
+    customerSelect = e => {
+        this.setState({tourType:e.target.value})
+      }
 
 
     render() {
@@ -62,19 +60,33 @@ class ExperienceProfie extends React.Component {
                 </div>
                 <div>
                     <form className="description" onSubmit={this.handleSubmit}>
+                        <h1>Fill free to add your Tour Experence</h1>
                         <div>
-                            <span>Title : </span>
+                            <span className="index2">Title : </span>
                             <input className="index" type="text" id="title" placeholder="Enter Title" name="title" value={this.state.title} onChange={this.handleChange} />
                         </div>
                         <div>
-                            <span>Location : </span>
-                            <input className="index1" type="text" id="name" placeholder="Enter Location" name="location" value={this.state.location} onChange={this.handleChange} />
+                            <span className="index2">Location : </span>
+                            <input className="index"  type="text" id="name" placeholder="Enter Location" name="location" value={this.state.location} onChange={this.handleChange} />
                         </div>
                         <div>
-                            <span>Description : </span>
-                            <input type="text" id="name" placeholder="...Enter Description" name="description" value={this.state.description} onChange={this.handleChange} />
+                            <span className="index2">Description : </span>
+                            <input className="index" type="text" id="name" placeholder="...Enter Tour Experience" name="description" value={this.state.description} onChange={this.handleChange} />
                         </div>
-                        <button type="submit">Add Experience</button>
+
+
+                        <div>
+                    Duration: <input id='guide-duration' type='number' className='guide-duration' name='duration' value={this.state.duration} onChange={this.handleChange}></input>
+                </div>
+                <div>
+            <select className='select-css' value={this.state.tourType} onChange={this.customerSelect}>
+                <option name='select' value='select-options'>Tour Type</option><i className="fas fa-caret-down"></i>
+                <option className='private-option' name='private' value='private'>Private</option>
+                <option className='professional-option' name='professional' value='customer'>Professional</option>
+            </select>   
+            </div>
+
+                        <button className="button1" type="submit">Add Experience</button>
                     </form>
                 </div>
 
@@ -84,4 +96,4 @@ class ExperienceProfie extends React.Component {
 
 }
 
-export default ExperienceProfie
+export default ExperienceProfile

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React,{Component} from 'react';
 import './App.css';
 import SignUp from "./Components/SignUpForm"
 import LogIn from "./Components/SignIn"
@@ -16,9 +16,9 @@ class App extends Component {
           <Route exact path="/SignUp" component={SignUp} />
           <Route exact path="/LogIn" component={LogIn} />
           <Route exact path="/ProfilePage" component={ProfilePage} />
-          <Route exact path="/TourGuide" component={TourGuide} />
-          <Route exact path="/TourGuideView" component={TourGuideView} />
-          <ExperienceProfie />
+          <Route exact path="/TravelGuide" component={TravelGuide} />
+          <Route exact path="/ExperienceProfile" component={ExperienceProfile} />
+         <Route extact path="/ExperienceView" component={ExperienceView}/>
         </Switch>
       </div>
     );
