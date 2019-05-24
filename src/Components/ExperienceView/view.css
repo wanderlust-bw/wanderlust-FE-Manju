@@ -2,7 +2,6 @@
    display:flex;
    flex-direction: row;
    flex-wrap:wrap;
-   color:white;
    margin-left:80px;
    margin-top: 20px;
 }
@@ -14,6 +13,62 @@
     height:250px;
     width:200px;
     border-radius:10px;
-    color:white;
 }
+
+.package{
+   background-color:#2F3C7E;
+   display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.stuff{
+margin-right: 50px;
+margin-top: 30px;
+font-size:17px;
+
+}
+
+.searchbox{
+    margin-right: 30px;
+    height:30px;
+    background: white;
+    width:200px;
+    font-size: 15px;
+}
+
+
+.together{
+    color:white;
+    margin-right: 17px;
+}
+
+.header{
+    color:white;
+    font-size:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

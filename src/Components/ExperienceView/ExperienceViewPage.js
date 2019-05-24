@@ -2,6 +2,9 @@ import React,{Component} from "react"
 import  TourExperinceList from "./ExperienceList"
 import SearchBar  from "./Searchbar"
 import auth from "../../token/token"
+import "./view.css"
+import dummy from '../../dummy'
+
 
 class ExperienceView extends React.Component {
     constructor() {
@@ -13,8 +16,12 @@ class ExperienceView extends React.Component {
       };
     }
     componentDidMount() {
-      auth().get(`https://wanderlust-1.herokuapp.com/user/7}`).then(res =>{this.setState({tours:res.data})})
-      .catch(err =>{console.log(err)})
+      auth().get(`https://wanderlust-1.herokuapp.com/user/trip`).then(res =>{this.setState({tours:res.data})})
+      .catch(err =>{
+        console.log(err, `Putting dummy data since API is returning no data`)
+        this.setState({tours: dummy});
+      }
+      )
     }
 
     // ${localStorage.getItem('userId')
@@ -36,7 +43,9 @@ onDelete = (e,id) =>{
     render(){
         return(
             <div>
+              <div>
                 <SearchBar searchToursHandler={this.searchToursHandler}  />
+                </div>
               <TourExperinceList tours={this.state.filterToursExperience.length > 0
               ? this.state.filterToursExperience
               : this.state.tours} delete={this.onDelete} />  

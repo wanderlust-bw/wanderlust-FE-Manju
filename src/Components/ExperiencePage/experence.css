@@ -29,17 +29,29 @@
 
  .description{
      margin-top: 50px;
+     margin-left: 350px;
+     background-color: #f2f2f2;
+     height:500px;
+     width:50%
+  
  }
 
  .index{
-    height:30px;
-    width:200px;
-    margin-top:20px;
+    width:400px;;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    box-sizing: border-box;
 }
 
-.index2{
-    color:white;
+.change{
+    background: white;
 }
+
+
 
 .button1{
     margin-top: 20px;
@@ -53,5 +65,30 @@
     text-shadow: 1px 1px black;
     cursor: pointer;
 }
+
+
+.index3{
+  font-size: 16px;
+  margin-top: 40px;
+  padding: 30px;
+}
+
+.index2{
+    margin-right: 300px;
+    margin-top: 29px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

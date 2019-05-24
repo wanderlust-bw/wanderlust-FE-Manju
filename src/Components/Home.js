@@ -66,34 +66,21 @@ class ProfilePage extends React.Component {
 
         return (
             <div>
+
                 <div>
-                    <nav className="profile">
-                        <div className="header">
-                            <h1>Wanderlust</h1>
-                        </div>
-
-                        <div className="secondpart">
-                            <div className="text" >
-                                <a className="search" href="#"><p className="newclass">Search</p></a>
-                            </div>
-                            <div>
-                                < h2 className="newclass1">Profile</h2>
-                            </div>
-                        </div>
-                    </nav>
-                    <div classname="about">
-                    </div>
-                    <div>
-
-                        <div >
-                        <a  href="#" className="work">Profile</a>
-                        <Link to="ExperienceProfie" className="work">ExperienceProfie</Link>
-                        <Link to = "/ExperienceView"className="work">ExperienceView</Link>
-                        <Link to= "/TravelGuide"className="work">ExperienceProfie</Link>
-                        <Link  className="work" to="/TravelGuide" >TravelGuide</Link>
-                        </div>
-                    </div>
-
+                    <nav>
+                    <div className="package">
+                     <div className="header">    
+                       <h1>Wanderlust</h1>
+                      </div>
+                      <div className="stuff">
+                      <input  className="searchbox" type="text" placeholder="Search" />
+                      <Link  className="together" to="/ExperienceView">ExperienceView</Link>
+                      <Link  className="together" to="/ExperienceProfile">ExperienceProfile</Link>
+                      <Link className="together" to="ProfilePage">ProfilePage</Link>
+                      </div>
+                      </div>  
+                     </nav>
                     <div className="form" >
                     <div>
                         <form onSubmit={this.handleSubmit}>

@@ -1,15 +1,20 @@
 import React from "react"
 import {Link} from "react-router-dom"
+import "./view.css"
 
 
 const SearchBar = props => {
     return(
-        <div>
+        <div className="package">
+          <div className="header">    
       <h1>Wanderlust</h1>
-      <Link to="/ExperienceProfile">ExperienceProfile</Link>
-      <Link to="ProfilePage">ProfilePage</Link>
-      
-        <input type="text" placeholder="Search" onKeyDown={props.searchToursHandler}/>
+      </div>
+      <div className="stuff">
+      <input  className="searchbox" type="text" placeholder="Search" onKeyDown={props.searchToursHandler}/>
+      <Link  className="together" to="/ExperienceView">ExperienceView</Link>
+      <Link  className="together" to="/ExperienceProfile">ExperienceProfile</Link>
+      <Link className="together" to="ProfilePage">ProfilePage</Link>
+      </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { Component }from "react"
 import "./experence.css"
 import auth from "../../token/token"
+import {Link} from "react-router-dom"
 
 class ExperienceProfile extends React.Component {
     constructor() {
@@ -51,35 +52,54 @@ class ExperienceProfile extends React.Component {
 
     render() {
         return (
+            <div>
             <div className="profilecomponent">
+             <div className="package">
+             <div className="header">    
+                 <h1>Wanderlust</h1>
+             </div>
+              <div className="stuff">
+                <input  className="searchbox" type="text" placeholder="Search" />
+                <Link  className="together" to="/ExperienceView">ExperienceView</Link>
+                 <Link  className="together" to="/ExperienceProfile">ExperienceProfile</Link>
+                 <Link className="together" to="ProfilePage">ProfilePage</Link>
+            </div>
+      
+              </div>
+               
                 <div>
-                    <div className='travel-logo'>
-                        <i id='map' className="fas fa-map"></i>
-                        <h3 className='title-text'><span>WanderLust</span> ...Traveling made easy</h3>
-                    </div> {/* travel-logo end */}
-                </div>
-                <div>
+               
                     <form className="description" onSubmit={this.handleSubmit}>
-                        <h1>Fill free to add your Tour Experence</h1>
+                    <h1 className="index3">Fill free to add your Tour Experience</h1>
                         <div>
-                            <span className="index2">Title : </span>
+                            <div classname="guides">
+                            <label className="index2">Title</label>
+                            </div>
+                            
                             <input className="index" type="text" id="title" placeholder="Enter Title" name="title" value={this.state.title} onChange={this.handleChange} />
                         </div>
                         <div>
-                            <span className="index2">Location : </span>
+                            <div>
+                            <label className="index2">Location</label>
+                            </div>
                             <input className="index"  type="text" id="name" placeholder="Enter Location" name="location" value={this.state.location} onChange={this.handleChange} />
                         </div>
                         <div>
-                            <span className="index2">Description : </span>
+                            <div>
+                            <label className="index2">Description </label>
+                            </div>
                             <input className="index" type="text" id="name" placeholder="...Enter Tour Experience" name="description" value={this.state.description} onChange={this.handleChange} />
                         </div>
 
 
                         <div>
-                    Duration: <input id='guide-duration' type='number' className='guide-duration' name='duration' value={this.state.duration} onChange={this.handleChange}></input>
+                        <div>
+                            <label className="index2">Duration </label>
+                            </div>
+                    <input  className="index " id='guideduration' type='number'  name='duration' value={this.state.duration} onChange={this.handleChange}></input>
                 </div>
                 <div>
-            <select className='select-css' value={this.state.tourType} onChange={this.customerSelect}>
+            <select  value={this.state.tourType} onChange={this.customerSelect}>
                 <option name='select' value='select-options'>Tour Type</option><i className="fas fa-caret-down"></i>
                 <option className='private-option' name='private' value='private'>Private</option>
                 <option className='professional-option' name='professional' value='customer'>Professional</option>
@@ -90,6 +110,7 @@ class ExperienceProfile extends React.Component {
                     </form>
                 </div>
 
+            </div>
             </div>
         )
     }

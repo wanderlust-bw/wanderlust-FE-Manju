@@ -18,21 +18,19 @@ body{
 }
 
 h1{
-    color:white;
+    /* color:white; */
     margin-left: 10px;
 }
 
 .search{
-    color:white;
+   
     height:40px;
     margin-right:10px; 
 }
 
 .form{
     margin-top: 50px;
-    
-    /* background-color: #05ffb0; */
-    background: #283655;
+    background-color: hsla(89, 43%, 51%, 0.3);
     width:1000px;
     margin-left:150px;
     height:1000px;
@@ -40,12 +38,13 @@ h1{
 }
 
 .textitem{
-    color:white;
+   background:white;
     margin-top: 40px;
 }
 
 .maindiv{
     margin-top: 20px;
+    
 }
 
 .textitem{
@@ -111,6 +110,7 @@ border-left: 1px solid black;
 padding: 10px;
 margin: 15px;
 cursor: pointer;
+background: white;
 }
 
 .submitButton{
@@ -122,7 +122,8 @@ border-radius: 15px;
 font-weight: 700;
 font-size: 10px;
 cursor: pointer;
-color:white;
+
+background: white;
 }
 
 .work{
@@ -183,7 +184,7 @@ color:white;
 }
 
 .profiles{
-    color:white;
+  padding: 30px;
    margin-top: 60px;
     margin-left: 50px;
     font-size: 20px;
@@ -192,15 +193,19 @@ color:white;
 
 .previewText{
     margin-top:90px;
-    color: white;
+  
 }
 .paragraph{
     margin-top: 20px;
 }
 
+.placeholder{
+    margin-top: 0px;
+}
 
-
-
+.submit{
+    color:black;
+}
 
 
 
