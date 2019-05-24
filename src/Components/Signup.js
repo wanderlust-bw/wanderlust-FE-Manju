@@ -14,14 +14,6 @@ class SignUp extends React.Component {
   }
   }
 
-//   componentDidMount() {
-//     axios.post('http://localhost:5000/user/register', this.state)
-//     .then(res => {
-//         const users = res.data;
-//         this.setState({ users: res.data })
-//     })
-//   }
-
   handleChange = e => {
     const {name, value} = e.target
     this.setState({ [name]: value });
@@ -101,7 +93,7 @@ handleSubmit = e => {
                 <button type='submit' className='started-button'>Get Started</button>
             </div>
             <div className='choose-type'>
-                <h3>I want to sign up as</h3>
+                <h3>Please Select a Type</h3>
             </div>
             <div>
             <select className='select-css' value={this.state.userType} onChange={this.customerSelect}>
