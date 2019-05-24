@@ -28,7 +28,7 @@ class ExperienceProfile extends React.Component {
     postExperience = input => {
         // input=this.state
         console.log('My params are', input)
-        auth().post(`https://wanderlust-1.herokuapp.com/user/trip`, input)
+        auth().post(`https://wanderlust-1.herokuapp.com/api/trip`, input)
             .then(res => { console.log(res) })
     }
     handleSubmit = e => {
@@ -56,7 +56,10 @@ class ExperienceProfile extends React.Component {
             <div className="profilecomponent">
              <div className="package">
              <div className="header">    
-                 <h1>Wanderlust</h1>
+             <div className='travel-logo'>
+           <i id='map' className="fas fa-map"></i>
+           <h3 className='title-text'><span>WanderLust</span> ...Traveling made easy</h3>
+       </div> {/* travel-logo end */}
              </div>
               <div className="stuff">
                 <input  className="searchbox" type="text" placeholder="Search" />
