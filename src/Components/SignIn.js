@@ -28,7 +28,7 @@ class LogIn extends React.Component {
         localStorage.setItem("token", res.data.token)
         localStorage.setItem("userId", res.data.userId)
         if (localStorage.getItem("userType") === "tourGuide") {
-          this.props.history.push("/TravelGuide")
+          this.props.history.push("/TourGuide")
         } else if (localStorage.getItem("userType") === "customer") {
           this.props.history.push("/ExperienceView")
         }
