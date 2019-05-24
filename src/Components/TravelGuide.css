@@ -1,12 +1,12 @@
-body {
+/* body {
     background-color: rgb(183, 237, 164);
-}
+} */
 
-body{
+.travel-app {
     background-color: white;
-    background-image: url('https://d36tnp772eyphs.cloudfront.net/blogs/1/2009/02/tourguide.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('https://d36tnp772eyphs.cloudfront.net/blogs/1/2009/02/tourguide.jpg') !important; 
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 
 
@@ -80,7 +80,7 @@ body{
 }
 
 #guide-name {
-    margin-left: 54px;
+    margin-left: 60px;
     background-color: #B1C267;
     border: 1px solid #B1C267;
     border-bottom: 1px solid white;
@@ -92,7 +92,7 @@ body{
 }
 
 #guide-location {
-    margin-left: 20px;
+    margin-left: 27px;
     background-color: #B1C267;
     border: 1px solid #B1C267;
     border-bottom: 1px solid white;
@@ -103,14 +103,28 @@ body{
     border-bottom: 1px solid black;
 }
 
-#guide-discription  {
+#guide-description  {
     margin-left: 4px;
     background-color: #B1C267;
     border: 1px solid #B1C267;
     border-bottom: 1px solid white;
 }
 
-#guide-discription::placeholder {
+#guide-description::placeholder {
+    color: white;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Amatic SC', cursive;
+}
+
+#guide-duration {
+    margin-left: 29px;
+    background-color: #B1C267;
+    border: 1px solid #B1C267;
+    border-bottom: 1px solid white;
+}
+
+#guide-deuration::placeholder {
     color: white;
     font-size: 18px;
     padding-left: 10px;
@@ -151,3 +165,26 @@ body{
     border: 1px solid black;
     width: 200px;
 }
+
+select {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    width: 150px;    
+    height: 35px;
+    padding-left: 27px;
+    color: #E5B42E;
+    cursor: pointer;
+    margin-left: 50px;
+    text-shadow: 1px 1px black;
+ }
+
+ select:hover {
+     text-shadow: 1px 1px black;
+     color: white;
+     border: 2px solid #38AED3;
+     cursor: pointer;
+     background-color: #E5B42E;
+ }

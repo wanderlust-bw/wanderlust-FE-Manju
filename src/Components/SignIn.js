@@ -24,6 +24,7 @@ class LogIn extends React.Component {
     axios.post(`https://wanderlust-1.herokuapp.com/user/login`, input)
       .then(res => {
         localStorage.setItem("userType", res.data.userType)
+        localStorage.setItem("token", res.data.token)
         localStorage.setItem("userId", res.data.userId)
         if (localStorage.getItem("userType") === "tourGuide") {
           this.props.history.push("/ProfilePage")

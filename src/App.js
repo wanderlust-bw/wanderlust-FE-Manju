@@ -5,7 +5,8 @@ import LogIn from "./Components/SignIn"
 import { Route, Switch } from 'react-router-dom'
 import ProfilePage from "./Components/Home"
 import ExperienceProfie from "./Components/experiencePage/ExperienceProfile"
-import TravelGuide from './Components/TravelGuide'
+import TourGuide from './Components/TourGuide'
+import TourGuideView from './Components/TravelGuide/TourGuideView'
 
 class App extends Component {
   render() {
@@ -15,7 +16,8 @@ class App extends Component {
           <Route exact path="/SignUp" component={SignUp} />
           <Route exact path="/LogIn" component={LogIn} />
           <Route exact path="/ProfilePage" component={ProfilePage} />
-          <Route exact path="/TravelGuide" component={TravelGuide} />
+          <Route exact path="/TourGuide" component={TourGuide} />
+          <Route exact path="/TourGuideView" component={TourGuideView} />
           <ExperienceProfie />
         </Switch>
       </div>
