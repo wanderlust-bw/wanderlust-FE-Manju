@@ -16,10 +16,10 @@ class ExperienceView extends React.Component {
       };
     }
     componentDidMount() {
-      auth().get(`https://wanderlust-1.herokuapp.com/user/trip`).then(res =>{this.setState({tours:res.data})})
+      auth().get(`https://wanderlust-1.herokuapp.com/api/trip/`).then(res =>{this.setState({tours:res.data})})
       .catch(err =>{
         console.log(err, `Putting dummy data since API is returning no data`)
-        this.setState({tours: dummy});
+        // this.setState({tours: dummy});
       }
       )
     }
@@ -36,7 +36,7 @@ class ExperienceView extends React.Component {
 
 onDelete = (e,id) =>{
   e.preventDefault();
-  auth().delete(`https://wanderlust-1.herokuapp.com/user/trip/${id}`)
+  auth().delete(`https://wanderlust-1.herokuapp.com/api/trip/${id}`)
   .then(res =>{  this.setState({ tours: res.data })})
 }
 
