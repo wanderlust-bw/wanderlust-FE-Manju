@@ -2,53 +2,124 @@ body {
     background-color: white !important;
 }
 
+.guide-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .guide-card {
     border: 1px solid black;
-    width: 550px;
+    width: 360px;
     height: 450px;
-    background-color: #B1C267;
-    font-family: 'Amatic SC', cursive;
-    text-align: center;
-    margin-left: 320px;
     margin-top: 200px;
+    margin-right: 20px;
+    border-radius: 5px;
+    margin-left: 65px;
+    text-align: start;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Amatic SC', cursive;
+    background-color: #B1C267;
+    border: 3px solid black;
+    padding-bottom: 10px;
+}
+
+.guide-card span {
+    text-decoration: underline !important;
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+#a {
+    margin-left: 64px;
+}
+
+#b {
+    margin-left: 35px;
+}
+
+#c {
+    margin-left: 10px;
+}
+
+#d {
+    margin-left: 32px;
 }
 
 .guide-card h3 {
     color: white;
     font-size: 30px;
+    text-shadow: 1px 1px black;
+    margin-left: 30px;
 }
 
 .guide-title{
-    font-size: 35px;
-    text-shadow: 1px 1px black;
+    font-size: 25px;
+    text-align: start;
 }
 
 .guide-locations{
-    font-size: 35px;
-    text-shadow: 1px 1px black;
+    font-size: 25px;
 }
 
 .guide-about{
-    font-size: 35px;
-    text-shadow: 1px 1px black;
+    font-size: 25px;
 }
 
 .guide-tour-type{
-    font-size: 35px;
-    text-shadow: 1px 1px black;
+    font-size: 25px;
 }
 
 .guide-buttons {
     height: 50px;
-    border-radius: 50px;
+    border-radius: 25px;
     margin-top: 20px;
     font-family: 'Amatic SC', cursive;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 25px;
     border: 1px solid black;
     color: white;
     background-color: #1F96BC;
     text-shadow: 1px 1px black;
     border: 3px solid white;
-    width: 90px;
+    width: 350px;
 }
+
+#guide-update {
+    margin-right: 20px;
+}
+
+.fa-map {
+    color: #38AED3 !important;
+    font-size: 30px !important;
+    margin-top: 20px !important;
+ }
+ 
+ .title-text span {
+    color: #1F96BC !important;
+ }
+ 
+ .title-text  {
+    color: #036887 !important;
+    margin: 10px !important;
+    font-family: 'Amatic SC', cursive !important;
+    font-size: 30px !important;
+ }
+
+ .travel-header {
+    background-color: #B1C267;
+ }
+
+ .travel-profile {
+    color: #036887 !important; 
+ }
+
+ .icon-top {
+     border: 1px solid black;
+ }
+
+ .button-div {
+     display: flex;
+     flex-direction: column;
+     margin: 0
+ }
