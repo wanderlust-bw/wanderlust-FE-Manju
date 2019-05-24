@@ -13,10 +13,11 @@ class ExperienceView extends React.Component {
       };
     }
     componentDidMount() {
-      auth().get(`https://wanderlust-1.herokuapp.com/user/trip`).then(res =>{this.setState({tours:res.data})})
+      auth().get(`https://wanderlust-1.herokuapp.com/user/7}`).then(res =>{this.setState({tours:res.data})})
       .catch(err =>{console.log(err)})
     }
 
+    // ${localStorage.getItem('userId')
     searchToursHandler = e => {
         const tours = this.state.tours.filter(p => {
             if (p.title.includes(e.target.value)) {
