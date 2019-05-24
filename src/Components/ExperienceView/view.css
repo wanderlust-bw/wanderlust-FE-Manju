@@ -31,6 +31,7 @@
 .package{
    /* background-color:rgb(16, 20, 37); */
    background: #2B327F;
+   /* background-color: #B1C267; */
    display:flex;
    flex-direction: row;
    flex-wrap: wrap;
@@ -62,6 +63,23 @@ font-size:17px;
     color:white;
     font-size:15px;
 }
+
+.fa-map {
+    color: #38AED3 !important;
+    font-size: 30px !important;
+    margin-top: 20px !important;
+ }
+ 
+ .title-text span {
+    color: #1F96BC !important;
+ }
+ 
+ .title-text  {
+    color: #036887 !important;
+    margin: 10px !important;
+    font-family: 'Amatic SC', cursive !important;
+    font-size: 30px !important;
+ }
 
 
 

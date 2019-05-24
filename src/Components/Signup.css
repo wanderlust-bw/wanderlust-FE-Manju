@@ -169,7 +169,7 @@ input {
     margin-top: 20px;
     margin-left: 30px;
 }
-
+/* 
 select {
     -webkit-appearance: none; 
     -moz-appearance: none;
@@ -181,13 +181,13 @@ select {
     padding-left: 12px;
     color: #E5B42E;
     cursor: pointer;
- }
+ } */
 
- select:hover {
+ /* select:hover {
      text-shadow: 1px 1px black;
      color: #E2A65B;
      border: 2px solid #38AED3;
      cursor: pointer;
- }
+ } */
 
 /*  */
