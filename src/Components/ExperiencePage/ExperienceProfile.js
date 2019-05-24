@@ -109,7 +109,7 @@ class ExperienceProfile extends React.Component {
             </select>   
             </div>
 
-                        <button className="button1" type="submit">Add Experience</button>
+                       <button className="button1" type="submit">Add Experience</button>
                     </form>
                 </div>
 
