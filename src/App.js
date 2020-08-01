@@ -15,12 +15,12 @@ class App extends Component {
       <div className="App">
         <Switch >
           <Route exact path="/SignUp" component={SignUp} />
-          <Route exact path="/LogIn" component={LogIn} />
-          <Route exact path="/ProfilePage" component={ProfilePage} />
-          <Route exact path="/TourGuide" component={TourGuide} />
-          <Route exact path="/TourGuideView" component={TourGuideView} />
-          <Route exact path="/ExperienceProfile" component={ExperienceProfile} />
-          <Route extact path="/ExperienceView" component={ExperienceView}/>
+          <Route  path="/LogIn" component={LogIn} />
+          <Route  path="/ProfilePage" component={ProfilePage} />
+          <Route  path="/TourGuide" component={TourGuide} />
+          <Route  path="/TourGuideView" component={TourGuideView} />
+          <Route  path="/ExperienceProfile" component={ExperienceProfile} />
+          <Route  path="/ExperienceView" component={ExperienceView}/>
         </Switch>
       </div>
     );
